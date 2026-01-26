@@ -1010,7 +1010,7 @@
       /* Keep colors in light mode */
     }
 
-    /* ================= PROJECTS SECTION ================= */
+    /* ================= PROJECTS SECTION - FIXED LINKS ================= */
     .projects-container {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -1179,15 +1179,35 @@
       transition: all 0.3s ease;
       justify-content: center;
       font-size: 0.95rem;
+      padding: 0.5rem 1rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      border: 1px solid var(--dark-border);
     }
 
     .project-link:hover {
       gap: 0.75rem;
-      transform: translateX(5px);
+      transform: translateY(-2px);
+      background: rgba(255, 255, 255, 0.2);
+      border-color: var(--dark-accent);
     }
 
     body.light .project-link {
       color: var(--light-accent);
+      background: rgba(0, 0, 0, 0.1);
+      border: 1px solid var(--light-border);
+    }
+
+    body.light .project-link:hover {
+      background: rgba(0, 0, 0, 0.2);
+      border-color: var(--light-accent);
+    }
+
+    /* Make sure project links are clickable */
+    .project-link {
+      position: relative;
+      z-index: 10;
+      cursor: pointer;
     }
 
     /* ================= CERTIFICATIONS SECTION ================= */
@@ -1741,7 +1761,6 @@
       </div>
 
       <div class="about-visual fade-in">
-        <!-- Replaced with a hiking-themed image from Unsplash -->
         <img src="https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
              alt="Mountain Hiking Adventure" class="about-image"
              onerror="this.src='https://images.unsplash.com/photo-1551632811-561732d1e306?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80'">
@@ -1925,7 +1944,7 @@
     </div>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Projects Section - WITH WORKING LINKS -->
   <section id="projects" class="section">
     <h2 class="section-title fade-in">Projects</h2>
     <p class="section-subtitle fade-in delay-1">Diverse implementations of AI solutions</p>
@@ -1947,7 +1966,7 @@
             <span class="tech-tag">Real-time</span>
             <span class="tech-tag">Fitness Tech</span>
           </div>
-          <a href="https://github.com/workgarimaswami/ai-pushup-tracker" class="project-link" target="_blank">
+          <a href="https://github.com/workgarimaswami/ai-pushup-trainer" class="project-link" target="_blank" rel="noopener noreferrer">
             View Project <i class="fas fa-arrow-right"></i>
           </a>
         </div>
@@ -1968,7 +1987,7 @@
             <span class="tech-tag">Transformers</span>
             <span class="tech-tag">LLM</span>
           </div>
-          <a href="https://github.com/workgarimaswami/ai-interview-coach" class="project-link" target="_blank">
+          <a href="https://github.com/workgarimaswami/ai-interview-coach" class="project-link" target="_blank" rel="noopener noreferrer">
             View Project <i class="fas fa-arrow-right"></i>
           </a>
         </div>
@@ -1989,7 +2008,7 @@
             <span class="tech-tag">ML</span>
             <span class="tech-tag">Dashboard</span>
           </div>
-          <a href="https://github.com/workgarimaswami/Automated-Job-Market-Intelligence-System" class="project-link" target="_blank">
+          <a href="https://github.com/workgarimaswami/Automated-Job-Market-Intelligence-System" class="project-link" target="_blank" rel="noopener noreferrer">
             View Project <i class="fas fa-arrow-right"></i>
           </a>
         </div>
@@ -2010,7 +2029,7 @@
             <span class="tech-tag">XGBoost</span>
             <span class="tech-tag">Feature Engineering</span>
           </div>
-          <a href="https://github.com/workgarimaswami/Customerchurnprediction" class="project-link" target="_blank">
+          <a href="https://github.com/workgarimaswami/Customerchurnprediction" class="project-link" target="_blank" rel="noopener noreferrer">
             View Project <i class="fas fa-arrow-right"></i>
           </a>
         </div>
@@ -2031,7 +2050,7 @@
             <span class="tech-tag">Real-time</span>
             <span class="tech-tag">Python</span>
           </div>
-          <a href="#" class="project-link" target="_blank">
+          <a href="https://github.com/workgarimaswami/Real-Time-Hand-Gesture-Recognition-" class="project-link" target="_blank" rel="noopener noreferrer">
             View Project <i class="fas fa-arrow-right"></i>
           </a>
         </div>
@@ -2052,7 +2071,7 @@
             <span class="tech-tag">AI</span>
             <span class="tech-tag">Autonomous Systems</span>
           </div>
-          <a href="#" class="project-link" target="_blank">
+          <a href="https://github.com/workgarimaswami/Behavior-Based-Autonomous-Agent-Simulation-Using-Braitenberg-Vehicles" class="project-link" target="_blank" rel="noopener noreferrer">
             View Project <i class="fas fa-arrow-right"></i>
           </a>
         </div>
@@ -2073,7 +2092,7 @@
             <span class="tech-tag">Python</span>
             <span class="tech-tag">BeautifulSoup</span>
           </div>
-          <a href="#" class="project-link" target="_blank">
+          <a href="https://github.com/workgarimaswami/Automated-Amazon-Product-Data-Scraper" class="project-link" target="_blank" rel="noopener noreferrer">
             View Project <i class="fas fa-arrow-right"></i>
           </a>
         </div>
@@ -2092,7 +2111,7 @@
         <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Advanced Learning Algorithms" class="certification-image">
         <h3 class="certification-title">Advanced Learning Algorithms</h3>
         <p>Deep Learning Specialization</p>
-        <a href="https://www.coursera.org/account/accomplishments/verify/QKWCRWZYFDL6" class="certification-link" target="_blank">
+        <a href="https://www.coursera.org/account/accomplishments/verify/QKWCRWZYFDL6" class="certification-link" target="_blank" rel="noopener noreferrer">
           <i class="fas fa-external-link-alt"></i> Verify Certificate
         </a>
       </div>
@@ -2102,7 +2121,7 @@
         <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Supervised Machine Learning" class="certification-image">
         <h3 class="certification-title">Supervised Machine Learning</h3>
         <p>Machine Learning Specialization</p>
-        <a href="https://www.coursera.org/account/accomplishments/specialization/JBFJLGCZGC1O" class="certification-link" target="_blank">
+        <a href="https://www.coursera.org/account/accomplishments/specialization/JBFJLGCZGC1O" class="certification-link" target="_blank" rel="noopener noreferrer">
           <i class="fas fa-external-link-alt"></i> Verify Certificate
         </a>
       </div>
@@ -2112,7 +2131,7 @@
         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Unsupervised Learning" class="certification-image">
         <h3 class="certification-title">Unsupervised Learning</h3>
         <p>Machine Learning Specialization</p>
-        <a href="https://www.coursera.org/account/accomplishments/verify/UCKL75F57ZAU" class="certification-link" target="_blank">
+        <a href="https://www.coursera.org/account/accomplishments/verify/UCKL75F57ZAU" class="certification-link" target="_blank" rel="noopener noreferrer">
           <i class="fas fa-external-link-alt"></i> Verify Certificate
         </a>
       </div>
@@ -2122,7 +2141,7 @@
         <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="AI for Beginners" class="certification-image">
         <h3 class="certification-title">AI for Beginners</h3>
         <p>Microsoft AI Fundamentals</p>
-        <a href="https://drive.google.com/file/d/1162bNDCBhzQZ3tEtWu27GcDobdpYK09R/view?usp=sharing" class="certification-link" target="_blank">
+        <a href="https://drive.google.com/file/d/1162bNDCBhzQZ3tEtWu27GcDobdpYK09R/view?usp=sharing" class="certification-link" target="_blank" rel="noopener noreferrer">
           <i class="fas fa-external-link-alt"></i> View Certificate
         </a>
       </div>
@@ -2132,7 +2151,7 @@
         <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Data Science and Analytics" class="certification-image">
         <h3 class="certification-title">Data Science and Analytics</h3>
         <p>Data Science Specialization</p>
-        <a href="https://drive.google.com/file/d/1162bNDCBhzQZ3tEtWu27GcDobdpYK09R/view?usp=sharing" class="certification-link" target="_blank">
+        <a href="https://drive.google.com/file/d/1162bNDCBhzQZ3tEtWu27GcDobdpYK09R/view?usp=sharing" class="certification-link" target="_blank" rel="noopener noreferrer">
           <i class="fas fa-external-link-alt"></i> View Certificate
         </a>
       </div>
@@ -2142,7 +2161,7 @@
         <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Recommenders" class="certification-image">
         <h3 class="certification-title">Recommenders Systems</h3>
         <p>Machine Learning Specialization</p>
-        <a href="#" class="certification-link" target="_blank">
+        <a href="https://www.coursera.org/account/accomplishments/verify/UCKL75F57ZAU" class="certification-link" target="_blank" rel="noopener noreferrer">
           <i class="fas fa-external-link-alt"></i> View Certificate
         </a>
       </div>
@@ -2152,7 +2171,7 @@
         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Reinforcement Learning" class="certification-image">
         <h3 class="certification-title">Reinforcement Learning</h3>
         <p>Advanced AI Specialization</p>
-        <a href="#" class="certification-link" target="_blank">
+        <a href="https://www.coursera.org/account/accomplishments/verify/UCKL75F57ZAU" class="certification-link" target="_blank" rel="noopener noreferrer">
           <i class="fas fa-external-link-alt"></i> View Certificate
         </a>
       </div>
@@ -2178,7 +2197,7 @@
           neurophysiological and linguistic markers. The study presents innovative approaches 
           to identifying learning disabilities at early stages for timely intervention.
         </p>
-        <a href="https://www.scitepress.org/Papers/2025/136156/136156.pdf" class="publication-link" target="_blank">
+        <a href="https://www.scitepress.org/Papers/2025/136156/136156.pdf" class="publication-link" target="_blank" rel="noopener noreferrer">
           <i class="fas fa-external-link-alt"></i> Read Full Paper
         </a>
       </div>
@@ -2196,7 +2215,7 @@
           real-time location sharing, emergency alerts, and AI-powered threat detection for 
           enhanced personal security in urban environments.
         </p>
-        <a href="https://www.ijircce.com/admin/main/storage/app/pdf/cRBzxpIlneYeHMeXX6aqAaIZqx6HTIAB2GuvdvPz.pdf" class="publication-link" target="_blank">
+        <a href="https://www.ijircce.com/admin/main/storage/app/pdf/cRBzxpIlneYeHMeXX6aqAaIZqx6HTIAB2GuvdvPz.pdf" class="publication-link" target="_blank" rel="noopener noreferrer">
           <i class="fas fa-external-link-alt"></i> Read Full Paper
         </a>
       </div>
@@ -2231,16 +2250,16 @@
       </p>
       
       <div class="footer-social">
-        <a href="https://www.linkedin.com/in/garimaswami/" class="social-icon" target="_blank">
+        <a href="https://www.linkedin.com/in/garimaswami/" class="social-icon" target="_blank" rel="noopener noreferrer">
           <i class="fab fa-linkedin-in"></i>
         </a>
-        <a href="https://github.com/workgarimaswami" class="social-icon" target="_blank">
+        <a href="https://github.com/workgarimaswami" class="social-icon" target="_blank" rel="noopener noreferrer">
           <i class="fab fa-github"></i>
         </a>
-        <a href="http://orcid.org/0009-0005-1436-1311" class="social-icon" target="_blank">
+        <a href="http://orcid.org/0009-0005-1436-1311" class="social-icon" target="_blank" rel="noopener noreferrer">
           <i class="fab fa-orcid"></i>
         </a>
-        <a href="mailto:garimaaswami646@example.com" class="social-icon">
+        <a href="mailto:garimaaswami646@example.com" class="social-icon" rel="noopener noreferrer">
           <i class="fas fa-envelope"></i>
         </a>
       </div>
@@ -2361,6 +2380,13 @@
         if (e.key === 'Escape') {
           closeResume();
         }
+      });
+      
+      // Debug: Log when project links are clicked
+      document.querySelectorAll('.project-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+          console.log('Project link clicked:', this.href);
+        });
       });
     });
   </script>
