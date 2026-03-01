@@ -1268,7 +1268,9 @@
       </div>
       
       <!-- FIXED: Image path with fallback placeholder -->
-      <img class="hero-image" src="frontend\Photo.png" alt="Garima Swami" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x533?text=Garima+Swami'">
+      <img class="hero-image" src="Photo.png" 
+     alt="Garima Swami" 
+     onerror="console.error('Failed to load: Photo.png'); this.src='https://via.placeholder.com/400x533?text=Garima+Swami'">
     </div>
   </section>
 
