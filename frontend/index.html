@@ -9,7 +9,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   
-  <!-- Font Awesome for icons (instead of emojis) -->
+  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <style>
@@ -494,7 +494,7 @@
     }
 
     /* -------------------- */
-    /* Education Section (Moved before Experience) */
+    /* Education Section */
     /* -------------------- */
     #education {
       background-color: var(--cream);
@@ -1243,8 +1243,9 @@
       <p class="hero-bio">AI engineering graduate student with experience in training, evaluating, and deploying machine learning systems in cloud-based environments. Specialized in speech-based AI systems, large-scale NLP pipelines, and production-ready ML deployments.</p>
       <div class="hero-cta">
         <a href="#contact" class="btn-primary">Get in Touch</a>
-        <!-- FIXED: Resume download link with correct path and fallback -->
-<a href="frontend\GarimaCV.pdf" download class="btn-download" onerror="this.href='#'; alert('Resume file not found. Please contact me directly.')"><i class="fas fa-download"></i> Resume</a>        <a href="#projects" class="btn-outline">View Projects</a>
+        <a href="./GARIMA_SWAMI_RESUME.pdf" download class="btn-download"><i class="fas fa-download"></i> Resume</a>
+           
+        <a href="#projects" class="btn-outline">View Projects</a>
       </div>
     </div>
     
@@ -1256,8 +1257,8 @@
         <!-- <div class="stat-card">
           <i class="fas fa-graduation-cap stat-icon"></i>
           <span>M.Sc. AI · BTU</span>
-        </div> -->
-        <!-- <div class="stat-card">
+        </div>
+        <div class="stat-card">
           <i class="fas fa-file-alt stat-icon"></i>
           <span>2 Publications</span>
         </div>
@@ -1267,17 +1268,70 @@
         </div> -->
       </div>
       
-      <!-- FIXED: Image path with fallback placeholder -->
-      <img class="hero-image" src="Photo.png" 
-     alt="Garima Swami" 
-     onerror="console.error('Failed to load: Photo.png'); this.src='https://via.placeholder.com/400x533?text=Garima+Swami'">
-    </div>
+      <!-- ========================================= -->
+      <!-- PROFILE IMAGE - TRY THESE ONE AT A TIME -->
+      <!-- ========================================= -->
+      
+      <!-- OPTION 1: Image in frontend folder (recommended based on your structure) -->
+      <img class="hero-image" src="./Photo.png" alt="Garima Swami" onerror="this.onerror=null; this.src='https://via.placeholder.com/400x533?text=Garima+Swami'">
+      </div>
   </section>
+
+  <!-- Debug Script - This will show you what files are loading -->
+  <script>
+    console.log('🔍 Current page URL:', window.location.href);
+    console.log('🔍 Current directory:', window.location.pathname);
+    
+    // Test image paths
+    const imagePaths = [
+      'frontend/Photo.png',
+      './frontend/Photo.png',
+      '/frontend/Photo.png',
+      'Photo.png',
+      './Photo.png',
+      '/Photo.png',
+      'images/Photo.png',
+      'frontend/Photo.jpg'
+    ];
+    
+    console.log('🔍 Testing image paths...');
+    imagePaths.forEach(path => {
+      const img = new Image();
+      img.onload = () => console.log('✅ IMAGE WORKS: ' + path);
+      img.onerror = () => console.log('❌ IMAGE FAILS: ' + path);
+      img.src = path;
+    });
+    
+    // Test PDF paths
+    const pdfPaths = [
+      'frontend/GarimaCV.pdf',
+      './frontend/GarimaCV.pdf',
+      '/frontend/GarimaCV.pdf',
+      'GarimaCV.pdf',
+      './GarimaCV.pdf',
+      '/GarimaCV.pdf',
+      'pdf/GarimaCV.pdf',
+      'assets/GarimaCV.pdf'
+    ];
+    
+    console.log('🔍 Testing PDF paths...');
+    pdfPaths.forEach(path => {
+      fetch(path, { method: 'HEAD' })
+        .then(response => {
+          if (response.ok) {
+            console.log('✅ PDF WORKS: ' + path);
+          } else {
+            console.log('❌ PDF FAILS: ' + path);
+          }
+        })
+        .catch(() => console.log('❌ PDF FAILS: ' + path));
+    });
+  </script>
 
   <!-- About Strip -->
   <div class="about-strip reveal">
     <div class="about-stat">
-      <div class="about-number">3<span>+</span></div>
+      <div class="about-number">~ 1<span></span></div>
       <div class="about-label">Years Experience</div>
     </div>
     <div class="about-divider"></div>
@@ -1309,7 +1363,7 @@
             <img class="education-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Logo_BTU_Cottbus.svg/1200px-Logo_BTU_Cottbus.svg.png" alt="BTU Logo" onerror="this.style.display='none'">
             <div>
               <div class="education-degree">M.Sc. Artificial Intelligence</div>
-              <div class="education-school">Brandenburg University of Technology (BTU), Germany</div>
+              <div class="education-school"> Brandenburgische Technische Universität, Germany</div>
             </div>
           </div>
           <div class="education-year">2025 — Present</div>
@@ -1725,9 +1779,9 @@
         <p class="contact-tagline">Open to new <em>opportunities & collaborations</em></p>
         <p class="contact-text">Whether you have an exciting AI project, a research collaboration, or just want to talk about intelligent systems — I'd love to hear from you. Let's build something meaningful together.</p>
         <div class="contact-links">
-          <a href="mailto:garimaswami@48@gmail.com" class="contact-link" target="_blank" rel="noopener noreferrer">
+          <a href="mailto:garimaswami646@gmail.com" class="contact-link" target="_blank" rel="noopener noreferrer">
             <i class="fas fa-envelope"></i>
-            garimaswami@48@gmail.com
+            garimaswami646@gmail.com
           </a>
           <a href="https://github.com/workgarimaswami" target="_blank" rel="noopener noreferrer" class="contact-link">
             <i class="fab fa-github"></i>
@@ -1789,7 +1843,7 @@
     <div class="footer-logo">GS</div>
     <div>© 2025 Garima Swami · AI Engineer</div>
     <div class="footer-social">
-      <a href="mailto:garimaswami@48@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i></a>
+      <a href="mailto:garimaswami646@gmail.com" target="_blank" rel="noopener noreferrer"><i class="fas fa-envelope"></i></a>
       <a href="https://github.com/workgarimaswami" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
       <a href="https://linkedin.com/in/garimaswami" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
       <a href="https://garimaswami.vercel.app/" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe"></i></a>
